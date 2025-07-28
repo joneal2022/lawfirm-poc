@@ -1,237 +1,318 @@
-# Design Notes - Bootstrap 5 Standard Implementation
+# Design Notes - AI-Powered Legal Intake System
 
-Used for claude code's reference for styling ui
+Used for Claude Code's reference for styling the legal intake system UI
 
 ## Overview
 
-This document outlines the UI/UX patterns for the Classroom Project Tracking Tool using standard Bootstrap 5 components and examples. All designs reference official Bootstrap 5 examples available at https://getbootstrap.com/docs/5.0/examples/
+This document outlines the UI/UX patterns for the AI-Powered Legal Intake System using standard Bootstrap 5 components. The system is designed for personal injury law firms to automate client intake, document processing, and lead qualification while maintaining HIPAA compliance and attorney-client privilege.
 
 ## Design Principles
 
-1. **Simplicity First**: Use default Bootstrap components without customization
-2. **Consistency**: Follow Bootstrap's design patterns throughout
-3. **Accessibility**: Leverage Bootstrap's built-in accessibility features
-4. **Mobile-First**: Utilize Bootstrap's responsive grid system
-5. **Performance**: Use Bootstrap CDN for optimal loading
+1. **Professional & Trust-building**: Legal industry requires credible, professional appearance
+2. **Security-First Design**: Visual indicators for secure sections and compliance
+3. **Simplicity**: Use default Bootstrap components without customization
+4. **Accessibility**: HIPAA compliance requires accessibility features
+5. **Mobile-First**: Responsive design for all devices including tablets for in-office use
+6. **Performance**: Bootstrap CDN for optimal loading in law firm environments
+
+## Color Scheme & Legal Industry Adaptation
+
+Using Bootstrap 5 default theme colors adapted for legal industry:
+- **Primary**: #0d6efd (Professional Blue - trust and reliability)
+- **Secondary**: #495057 (Dark Gray - professional, serious)
+- **Success**: #198754 (Green - case acceptance, positive outcomes)
+- **Warning**: #ffc107 (Yellow - pending reviews, statute of limitations alerts)
+- **Danger**: #dc3545 (Red - declined cases, urgent deadlines)
+- **Info**: #0dcaf0 (Cyan - informational alerts)
+- **Light**: #f8f9fa (Clean backgrounds)
+- **Dark**: #212529 (Professional headers)
+
+## Key User Roles & Interface Adaptations
+
+### 1. Intake Specialist Interface
+- Simplified dashboard focused on new intake management
+- Quick access to client communication tools
+- Document upload progress indicators
+- Basic reporting for daily metrics
+
+### 2. Paralegal Interface
+- Advanced document review and OCR correction tools
+- Case organization and conflict checking features
+- Medical record parsing interfaces
+- Detailed search and filtering capabilities
+
+### 3. Attorney Interface
+- Case evaluation and scoring review
+- Attorney work product sections with privilege indicators
+- Decision-making interfaces for case acceptance
+- Complete case file access
+
+### 4. Managing Partner Interface
+- Executive dashboard with firm-wide analytics
+- Financial projections and ROI metrics
+- Policy configuration interfaces
+- High-level reporting tools
+
+### 5. System Administrator Interface
+- User management and role configuration
+- System monitoring and audit log access
+- Integration management interfaces
+- Security configuration panels
 
 ## Page Layouts
 
-### 1. Authentication Pages (Login/Register)
-**Reference**: https://getbootstrap.com/docs/5.0/examples/sign-in/
-- Centered card layout
-- Standard form controls
-- Form validation states
-- Remember me checkbox
-- Link to alternate action (login/register)
+### 1. Authentication Pages
+**Reference**: Bootstrap sign-in example
+- HIPAA-compliant login with MFA integration
+- Professional law firm branding area
+- Security indicators and compliance notices
+- Password strength indicators
+- Session management options
 
 ### 2. Main Dashboard Layout
-**Reference**: https://getbootstrap.com/docs/5.0/examples/dashboard/
-- Fixed sidebar navigation
-- Top navbar with search and user dropdown
-- Main content area with responsive grid
-- Breadcrumb navigation
-- Card-based content sections
+**Reference**: Bootstrap dashboard example
+- Role-specific sidebar navigation
+- Top navbar with firm branding and secure user menu
+- Widget-based dashboard with KPIs
+- Quick action buttons for common tasks
+- Secure logout with session cleanup
 
-### 3. Project List View
-**Reference**: https://getbootstrap.com/docs/5.0/examples/album/
-- Grid of project cards
-- Each card shows:
-  - Project name
-  - Description preview
-  - Member count
-  - Status badge
-  - Action buttons
+### 3. Intake Management Interface
+**Reference**: Bootstrap album/cards layout
+- Card-based intake preview system
+- Status badges for intake workflow stages
+- Filter and search functionality
+- Bulk action capabilities
+- Priority indicators for urgent cases
 
-### 4. Kanban Board
-**Reference**: https://getbootstrap.com/docs/5.0/examples/masonry/
-- Column-based layout
-- Draggable cards within columns
-- Status columns (To Do, In Progress, Review, Done)
-- Task cards with:
-  - Title and ID
-  - Assignee avatar
-  - Priority badge
-  - Due date
+### 4. Document Processing Interface
+**Reference**: Bootstrap masonry layout
+- Split-screen OCR correction interface
+- Document classification panels
+- Information extraction displays
+- Quality scoring indicators
+- Batch processing status
 
-### 5. Forms and Modals
-**Reference**: https://getbootstrap.com/docs/5.0/examples/checkout/
-- Standard form layouts
-- Floating labels for modern look
-- Input groups for related fields
-- Modal dialogs for:
-  - Creating projects/tasks
-  - Confirmations
-  - Quick edits
+### 5. Case Review & Analysis
+**Reference**: Bootstrap checkout form layout
+- AI analysis results display
+- Liability assessment indicators
+- Damages calculation breakdowns
+- Recommendation engine outputs
+- Decision recording interfaces
+
+### 6. Client Communication Center
+- Timeline view of all interactions
+- Secure messaging interfaces
+- Automated communication templates
+- Compliance tracking for communications
+- Integration with email/SMS systems
 
 ## Component Patterns
 
-### Navigation
-- **Primary Nav**: Bootstrap navbar with brand, search, and user menu
-- **Sidebar**: Vertical nav with icons and text
-- **Breadcrumbs**: For hierarchical navigation
-- **Tabs**: For switching between related views
+### Security & Compliance Components
+- **Privilege Markers**: Visual indicators for attorney work product
+- **HIPAA Compliance Badges**: Show secure data handling
+- **Encryption Indicators**: Visual confirmation of data protection
+- **Audit Trail Display**: Transparent logging for compliance
+- **Access Control Indicators**: Show permission levels
 
-### Data Display
-- **Tables**: Responsive tables with hover states
-- **Cards**: For individual items (projects, tasks, features)
-- **Lists**: List groups for comments, activities
-- **Badges**: For status, counts, labels
+### Legal-Specific Data Display
+- **Case Status Badges**: Color-coded workflow stages
+- **Priority Indicators**: Urgent, high, normal, low with appropriate colors
+- **Document Type Labels**: Medical records, police reports, etc.
+- **AI Confidence Scores**: Visual indicators for analysis accuracy
+- **Financial Projections**: Currency formatting and calculations
 
-### Forms
-- **Input Types**: Standard Bootstrap form controls
-- **Validation**: Built-in validation classes
-- **Help Text**: Form text for guidance
-- **File Upload**: Custom file input styling
+### Workflow Management
+- **Multi-Step Forms**: Intake process with progress indicators
+- **Review Queues**: Sortable, filterable tables
+- **Decision Recording**: Accept/decline with reasoning capture
+- **Task Assignment**: User selection and deadline management
+- **Status Transitions**: Clear workflow progression
 
-### Feedback
-- **Alerts**: Dismissible alerts for messages
-- **Toasts**: For transient notifications
-- **Progress**: Progress bars for loading states
-- **Spinners**: Loading indicators
+### Document Handling
+- **Drag-and-Drop Upload**: With progress indicators
+- **OCR Status Display**: Processing, completed, error states
+- **Document Viewer**: PDF and image display with annotations
+- **Batch Processing**: Multiple document handling
+- **File Organization**: Categorized document management
 
-## Color Scheme
+## Forms and Data Entry
 
-Using Bootstrap 5 default theme colors:
-- **Primary**: #0d6efd (Blue)
-- **Secondary**: #6c757d (Gray)
-- **Success**: #198754 (Green)
-- **Danger**: #dc3545 (Red)
-- **Warning**: #ffc107 (Yellow)
-- **Info**: #0dcaf0 (Cyan)
-- **Light**: #f8f9fa
-- **Dark**: #212529
+### Intake Forms
+- **Progressive Disclosure**: Show relevant fields based on previous answers
+- **Validation**: Real-time validation with legal-specific rules
+- **Auto-Save**: Prevent data loss during long forms
+- **Required Field Indicators**: Clear marking for mandatory information
+- **Help Text**: Legal terminology explanations
 
-## Typography
+### Document Metadata Forms
+- **Smart Classification**: AI-suggested document types
+- **Date Pickers**: For incident dates, treatment dates
+- **Provider Selection**: Medical provider and insurance company lookups
+- **Amount Fields**: Currency formatting for damages
+- **Text Extraction**: Editable OCR results
 
-Using Bootstrap's default typography stack:
-- **Font Family**: System font stack
-- **Base Size**: 1rem (16px)
-- **Headings**: Bootstrap's default heading scales
-- **Body Text**: Regular weight for readability
+## Responsive Design Considerations
 
-## Spacing and Layout
+### Desktop (Law Office Workstations)
+- Multi-panel layouts for document review
+- Detailed tables with extensive filtering
+- Full feature access for complex workflows
+- Keyboard shortcuts for power users
 
-- **Grid**: 12-column responsive grid
-- **Containers**: .container for fixed width, .container-fluid for full width
-- **Spacing**: Use Bootstrap spacing utilities (p-*, m-*)
-- **Gutters**: Default Bootstrap gutter widths
+### Tablet (Client Consultation)
+- Simplified intake forms for client use
+- Touch-optimized controls
+- Larger text for readability
+- Camera integration for document capture
 
-## Interactive Elements
+### Mobile (Remote Access)
+- Essential functions only
+- Simplified navigation
+- Quick status checking
+- Emergency contact features
 
-### Buttons
-- **Primary Actions**: .btn-primary
-- **Secondary Actions**: .btn-secondary
-- **Danger Actions**: .btn-danger
-- **Sizes**: Regular, .btn-sm, .btn-lg
+## Accessibility & Compliance
 
-### Links
-- **Primary Links**: Default Bootstrap link color
-- **Navigation Links**: .nav-link styling
-- **Breadcrumb Links**: Subdued until hover
+### HIPAA Technical Safeguards
+- Visual session timeout warnings
+- Secure logout confirmations
+- Screen overlay for sensitive data
+- Print prevention for protected information
+- Automatic screen locking indicators
 
-### Form Controls
-- **Focus States**: Bootstrap's default focus styling
-- **Disabled States**: Reduced opacity
-- **Error States**: .is-invalid with feedback
-
-## Responsive Breakpoints
-
-Following Bootstrap 5 defaults:
-- **xs**: <576px (default)
-- **sm**: ≥576px
-- **md**: ≥768px
-- **lg**: ≥992px
-- **xl**: ≥1200px
-- **xxl**: ≥1400px
-
-## Implementation Examples
-
-### Basic Page Structure
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-</head>
-<body>
-    <!-- Content -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-```
-
-### Dashboard Layout Reference
-- Sidebar: Fixed position, 250px width
-- Main content: Margin-left to accommodate sidebar
-- Top navbar: Fixed top with shadow
-- Content area: Container with padding
-
-### Card Component Pattern
-- Use .card with .card-body
-- Optional .card-header and .card-footer
-- Standard spacing with .mb-3 or .mb-4
-- Consistent border and shadow
-
-## Accessibility Considerations
-
-1. Use semantic HTML elements
-2. Include proper ARIA labels
-3. Ensure keyboard navigation works
-4. Maintain color contrast ratios
-5. Provide alternative text for images
-6. Use Bootstrap's screen reader utilities
+### Legal Accessibility Requirements
+- Screen reader compatibility
+- Keyboard navigation
+- High contrast options
+- Text scaling support
+- Language translation support
 
 ## Performance Guidelines
 
-1. Load Bootstrap from CDN
-2. Minimize custom CSS
-3. Use Bootstrap's utility classes
-4. Lazy load images where appropriate
-5. Minimize JavaScript interactions
+### Legal Document Processing
+- Progress indicators for OCR processing
+- Lazy loading for large document sets
+- Efficient pagination for case lists
+- Caching for frequently accessed data
+- Background processing indicators
+
+### Network Considerations
+- Offline capability for document viewing
+- Progressive loading for slow connections
+- Compression for document transfers
+- CDN optimization for static assets
 
 ## File Organization
 
 ```
 /html/
   /assets/
-    /images/     # User uploads, logos
+    /images/         # Firm logos, user avatars, icons
+    /uploads/        # Client documents (encrypted storage)
+    /exports/        # Generated reports and exports
   /includes/
-    header.php   # Common header with navbar
-    footer.php   # Common footer
-    sidebar.php  # Reusable sidebar component
+    header.php       # Role-based navigation
+    footer.php       # Compliance footer information
+    sidebar.php      # Context-sensitive sidebar
+    auth-check.php   # Session and permission validation
   /pages/
-    login.php
-    register.php
-    dashboard.php
-    projects.php
-    tasks.php
-    etc.
+    login.php        # MFA-enabled authentication
+    dashboard.php    # Role-specific dashboard
+    intake/          # Client intake management
+    documents/       # Document processing interfaces
+    analysis/        # AI analysis and review
+    reports/         # Analytics and reporting
+    admin/           # System administration
+  /api/
+    auth/           # Authentication endpoints
+    intake/         # Intake management API
+    documents/      # Document processing API
+    analysis/       # AI analysis API
+    reports/        # Reporting API
+  /migrations/      # Database schema updates
+  /config/         # Application configuration
 ```
 
-## Development Workflow
+## Security Visual Indicators
 
-1. Start with Bootstrap examples
-2. Use standard components
-3. Apply utility classes for spacing/styling
-4. Add minimal custom CSS only if necessary
-5. Test responsive behavior
-6. Validate accessibility
+### Data Classification
+- **Public**: Standard styling
+- **Confidential**: Yellow border/background
+- **Privileged**: Red border with lock icon
+- **PHI/PII**: Blue border with shield icon
+
+### User Permissions
+- **Admin Functions**: Dark background with admin badge
+- **Restricted Access**: Grayed out with permission note
+- **Temporary Access**: Orange indicators with expiration
+- **Audit Required**: Special indicators for logged actions
+
+## Implementation Examples
+
+### Legal Dashboard Card
+```html
+<div class="card mb-3" id="intake-summary-card">
+  <div class="card-header d-flex justify-content-between">
+    <h5 class="mb-0">Today's Intake Summary</h5>
+    <span class="badge bg-primary">5 New</span>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="text-center">
+          <h3 class="text-success">12</h3>
+          <small class="text-muted">Total Received</small>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center">
+          <h3 class="text-warning">5</h3>
+          <small class="text-muted">Under Review</small>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center">
+          <h3 class="text-success">3</h3>
+          <small class="text-muted">Accepted</small>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="text-center">
+          <h3 class="text-danger">2</h3>
+          <small class="text-muted">Declined</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Case Status Badge System
+```html
+<span class="badge bg-secondary" id="intake-status-new">New Intake</span>
+<span class="badge bg-info" id="intake-status-documents">Documents Pending</span>
+<span class="badge bg-warning" id="intake-status-review">Under Review</span>
+<span class="badge bg-primary" id="intake-status-attorney">Attorney Review</span>
+<span class="badge bg-success" id="intake-status-accepted">Accepted</span>
+<span class="badge bg-danger" id="intake-status-declined">Declined</span>
+```
 
 ## References
 
 - Bootstrap 5 Documentation: https://getbootstrap.com/docs/5.0/
-- Bootstrap 5 Examples: https://getbootstrap.com/docs/5.0/examples/
-- Bootstrap Icons: https://icons.getbootstrap.com/
-- Bootstrap Utilities: https://getbootstrap.com/docs/5.0/utilities/api/
+- HIPAA Technical Safeguards: https://www.hhs.gov/hipaa/for-professionals/security/
+- ADA Accessibility Guidelines: https://www.ada.gov/
+- Legal Industry UX Best Practices
+- Personal Injury Law Firm Workflows
 
 ## Notes
 
-- Avoid customizing Bootstrap variables
-- Use CDN versions for consistency
-- Follow Bootstrap naming conventions
-- Leverage Bootstrap JavaScript plugins
-- Keep custom CSS to absolute minimum
+- All interfaces must support HIPAA audit requirements
+- Attorney-client privilege must be visually indicated
+- Session management must be prominent for security
+- Mobile interfaces should focus on essential functions only
+- All forms must have proper validation and error handling
+- Document processing status must be clearly communicated
