@@ -693,7 +693,7 @@ POST   /api/reports/custom       # Custom report generation
 ### Phase 1: Foundation (Weeks 1-4)
 - **Week 1-2**: Environment setup and security framework
   - Development environment configuration
-  - Security infrastructure implementation
+  - Security infrastructure implementation (don't worry about this for the POC!!!!)
   - Database design and encryption setup
   - Authentication system with MFA
 
