@@ -24,7 +24,7 @@ Every time you perform actions related to the project, append your actions to do
 9. Git Repository
 Every time you make successful changes please push the changes to the current git repository.
 10. HTML Folder
-The html folder is the html home directory of the web server.  It is a traditional LAMP stack. All files that need to be deployed
+The html folder is the html home directory of the web server.  It is a traditional MAMP stack. All files that need to be deployed
 must be in that folder or a sub-folder.
 11. ID tags
 In every html file make sure each div tag has a unique id that I can use to communicate with you through my prompts when I need to make style change.
