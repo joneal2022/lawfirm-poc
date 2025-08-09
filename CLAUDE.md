@@ -6,9 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 1. Initial Analysis and Planning
 First think through the problem, read the codebase for relevant files, and write a plan to tasks/todo.md.
-2. Design Inspiration
+2. Design Inspiration 
 The folder design is a bootstrap5 template that I want to use as the design inspiration of the applications.  Please do
-not make make any changes to any file in this folder or subfolders.  
+not make make any changes to any file in this folder or subfolders.
+    2a. Use design-notes.md as a reference or guide when implementing UI/UX code!
 3. Todo List Structure
 The plan should have a list of todo items that you can check off as you complete them.
 4. Plan Verification
